@@ -1,0 +1,70 @@
+{% load static %}
+<html>
+    <head>
+        <style>
+            div
+            {
+                box-shadow: 0 0 10px black ;
+                background-color: red;
+                width: 350px;
+                height: 225px;
+                margin: 100px auto;
+                border-radius: 10px;
+                position: relative;
+                transition: all 1s linear 0s;
+                overflow: hidden;
+            
+
+            }
+            div>img
+            {
+                width: inherit;
+                height: inherit;
+                border-radius: 10px;
+                filter: grayscale(100%);
+                
+                
+            }
+            div:hover>img
+            {
+                cursor: pointer;
+                filter: grayscale(0%);
+
+            }
+            #child
+            {
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                margin-top: -225px;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.4);
+                color: white;
+                transform: translateY(100%);
+              
+             }
+            p{
+                margin: -5px;
+            }
+            div:hover>#child
+            {
+                transform: translateY(0%);
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="{% static 'images/abd.jpeg' %}" alt="">
+            <div id="child">
+                <h1>ABd</h1>
+                <p>Abraham Benjamin de Villiers (born 17 February 1984) is a former
+                     South African international cricketer. AB de Villiers was named 
+                     as the ICC ODI Player of the Year three times during his 15-year
+                      international career and was one of the five Wisden cricketers of 
+                      the decade at the end of 2019.</p>
+                      <button style="margin-top: 5px;">Click Button</button>
+            </div>
+        </div>
+    </body>
+</html>
